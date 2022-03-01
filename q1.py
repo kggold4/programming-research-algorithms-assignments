@@ -25,4 +25,4 @@ def f(x: int, y: float, z):
 
 
 if __name__ == '__main__':
-    safe_call(f, x=5, y=7.0, z='a')
+    print(safe_call(f, x=5, y=7.0, z=True))  # == 13.0

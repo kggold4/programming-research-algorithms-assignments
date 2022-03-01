@@ -8,6 +8,12 @@ def derivative(func, x, h: float = EPSILON):
 
 
 def find_root(func, low, high, iterations: int = DEFAULT_ITERATIONS):
+    if high < low:
+        # swap
+        temp = low
+        low = high
+        high = temp
+
     xn = low
     step = (high - low) / iterations  # step each iteration
     while low <= high:
