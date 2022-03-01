@@ -13,7 +13,7 @@ def safe_call(func, **kwargs):
                 raise TypeError(
                     f"Argument {key} with value of {value} should be {required_type} type and not {real_type}")
     try:
-        print(func(**kwargs))
+        return func(**kwargs)
     except Exception as e:
         print(f"Exception while call given function {func.__name__}")
         raise e
@@ -25,4 +25,4 @@ def f(x: int, y: float, z):
 
 
 if __name__ == '__main__':
-    safe_call(f, x=5, y=7.0, z=3)
+    safe_call(f, x=5, y=7.0, z='a')

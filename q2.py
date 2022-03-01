@@ -27,16 +27,19 @@ def return_sorted(data):
     return sorted(not_data_structures) + sorted(data_structures, key=sum)
 
 
-def print_sorted(data) -> None:
+def print_sorted(data):
     print('\nprint_sorted:', type(data), '\ninput:', data)
     if type(data) in DATA_STRUCT_TYPES:  # list and tuple
         print('result:', return_sorted(data))
+        return return_sorted(data)
     elif type(data) is dict:  # dict
         for k, v in data.items():
             data[k] = return_sorted(v)
         print('result:', dict(sorted(data.items())))
+        return dict(sorted(data.items()))
     else:  # set is already sorted
         print('result:', data)
+        return data
 
 
 # example
