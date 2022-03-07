@@ -2,7 +2,7 @@
 last_value = None
 
 
-def lastcall(func):
+def last_call(func):
     def inner(arg):
         global last_value
         if not (last_value is None or arg != last_value):
@@ -14,12 +14,14 @@ def lastcall(func):
     return inner
 
 
-@lastcall
+# example
+
+@last_call
 def f(x: int):
     return x ** 2
 
 
-@lastcall
+@last_call
 def g(s: str):
     return s + "-string"
 
