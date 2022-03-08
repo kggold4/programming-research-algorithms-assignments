@@ -27,8 +27,10 @@ class List(list):
         """
         if current_list is None:  # first time
             current_list = self.inner_list
+        print('current_list:', current_list)
 
         if type(keys) == int:  # regular get item
+            print(keys)
             return current_list[keys]
         elif len(keys) == 1:  # recursive stop condition
             return current_list[keys[0]]

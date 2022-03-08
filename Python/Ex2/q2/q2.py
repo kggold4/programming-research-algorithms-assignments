@@ -2,11 +2,18 @@
 last_value = None
 
 
+def reset_last_value():
+    global last_value
+    last_value = None
+
+
 def last_call(func):
     def inner(arg):
         global last_value
         if not (last_value is None or arg != last_value):
-            print(f"I already told you the the answer is {func(arg)}!")
+            result = f"I already told you the the answer is {func(arg)}!"
+            print(result)
+            return result
         else:
             last_value = arg
         return func(arg)
