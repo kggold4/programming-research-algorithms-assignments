@@ -1,7 +1,3 @@
-# global last value
-# last_value = None
-
-
 class LastCall:
     def __init__(self):
         self.last_call = None
@@ -10,16 +6,11 @@ class LastCall:
         self.last_call = value
 
 
-# def reset_last_value():
-    # global last_value
-    # last_value = None
-
-
 def last_call(func):
     last_call_value = LastCall()
 
     def inner(arg):
-        if not (last_call_value.last_call is None or arg != last_value):
+        if not (last_call_value.last_call is None or arg != last_call_value.last_call):
             result = f"I already told you the the answer is {func(arg)}!"
             print(result)
             return result
