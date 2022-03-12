@@ -31,7 +31,7 @@ def q(x):
 
 class Test(TestCase):
     def test_last_call_f_random_values(self):
-        q2.reset_last_value()
+        q2.LastCall()
         last_value = None
         for _ in range(RANGE_LOOP_2):
             random_int = random.randint(0, RANGE_LOOP_1)
@@ -45,7 +45,7 @@ class Test(TestCase):
             last_value = random_int
 
     def test_last_call_g_random_values(self):
-        q2.reset_last_value()
+        q2.LastCall()
         last_value = None
         for _ in range(RANGE_LOOP_2):
             random_word = generate_random_string(length=RANGE_LOOP_1)
@@ -59,7 +59,7 @@ class Test(TestCase):
             last_value = random_word
 
     def test_last_call_q(self):
-        q2.reset_last_value()
+        q2.LastCall()
         assert q(15) is True  # first time
         for _ in range(RANGE_LOOP_1):
             assert q(15) == "I already told you the the answer is True!"
@@ -73,7 +73,7 @@ class Test(TestCase):
             assert q(False) == "I already told you the the answer is True!"
 
     def test_last_case_special_cases(self):
-        q2.reset_last_value()
+        q2.LastCall()
         # 0 and False assertion is equal to True: 0 == False -> True
         assert q(False) is True
         try:
