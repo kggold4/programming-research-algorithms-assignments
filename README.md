@@ -7,8 +7,8 @@
 ## Assignments list:
 ### Python:
 1. [Ex0](Python/Ex0)
-2. [Ex2](Python/Ex1)
-3. [Ex4](Python/Ex2)
+2. [Ex2](Python/Ex2)
+3. [Ex4](Python/Ex4)
 
 ### Research:
 1. [Ex1](Research/Ex1)
