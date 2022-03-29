@@ -1,4 +1,4 @@
-# <i>Programming Research Algorithms Assignment #2</i>
+# <i>Programming Research Algorithms Assignment 2</i>
 ## Python
 
 This assignment has three questions:
