@@ -5,7 +5,7 @@ from q2 import tsp_shortest_path, hamilton_cycle, back_tracking, GRAPH_1, GRAPH_
 
 def main():
     graph = []
-    n = int(input("Enter number of vertexes: "))
+    n = int(input("Enter number of vertices: "))
     for i in range(n):
         print(f"{i}) Enter vertex values:")
         graph.append(get_list(n=n))

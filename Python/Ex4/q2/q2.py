@@ -73,24 +73,23 @@ def back_tracking(graph, start):
     >>> tsp_shortest_path(algorithm=back_tracking, graph_matrix=GRAPH_3, start=0)
     17
     """
-    n = len(graph)
-    v = [False for _ in range(n)]
-    v[start] = True
+    vertices = [False for _ in range(len(graph))]
+    vertices[start] = True
     answer = []
-    back_tracking_rec(graph, v, 0, n, 1, 0, answer)
+    back_tracking_rec(graph, vertices, 0, 1, 0, answer)
     return min(answer)
 
 
-def back_tracking_rec(graph, v, pos, n, count, cost, answer):
+def back_tracking_rec(graph, vertices, pos, count, cost, answer):
+    n = len(graph)
     if count == n and graph[pos][0]:
         answer.append(cost + graph[pos][0])
         return
-    for i in range(n):
-        if v[i] is False and graph[pos][i]:
-            v[i] = True
-            back_tracking_rec(graph, v, i, n, count + 1,
-                              cost + graph[pos][i], answer)
-            v[i] = False
+    for v in range(n):
+        if not vertices[v] and graph[pos][v]:
+            vertices[v] = True
+            back_tracking_rec(graph, vertices, v, count + 1, cost + graph[pos][v], answer)
+            vertices[v] = False
 
 
 def hamilton_cycle(graph_matrix: list, start: int):
@@ -102,27 +101,20 @@ def hamilton_cycle(graph_matrix: list, start: int):
     >>> tsp_shortest_path(algorithm=hamilton_cycle, graph_matrix=GRAPH_7, start=0)
     10
     """
-    vertex = []
-    for i in range(len(graph_matrix)):
-        if i != start:
-            vertex.append(i)
+    vertices = []
+    for v in range(len(graph_matrix)):
+        if v != start:
+            vertices.append(v)
 
-    # store minimum weight Hamiltonian Cycle
     min_path_weight = maxsize
-    next_permutation = permutations(vertex)
-    for i in next_permutation:
-
-        # current path weight
+    next_permutation = permutations(vertices)
+    for p in next_permutation:
         path_weight = 0
-
-        # calculate current path weight
         k = start
-        for j in i:
-            path_weight += graph_matrix[k][j]
-            k = j
+        for q in p:
+            path_weight += graph_matrix[k][q]
+            k = q
         path_weight += graph_matrix[k][start]
-
-        # update min_path_weight
         min_path_weight = min(min_path_weight, path_weight)
 
     return min_path_weight
