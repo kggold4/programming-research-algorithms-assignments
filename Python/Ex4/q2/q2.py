@@ -132,4 +132,4 @@ if __name__ == "__main__":
     import doctest
 
     (failures, tests) = doctest.testmod(report=True)
-    print("{} failures, {} tests".format(failures, tests))
+    print(f"{failures} failures, {tests} tests")
