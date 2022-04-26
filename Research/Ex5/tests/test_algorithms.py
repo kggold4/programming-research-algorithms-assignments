@@ -13,6 +13,9 @@ MAX_VALUE_3 = 100000
 
 
 class TestAlgorithms(TestCase):
+    """
+    Test cases for all the algorithms at algorithms.py
+    """
     def test_base_greedy_algorithm(self):
         numbers = []
         k = random.randint(0, MAX_VALUE_1)

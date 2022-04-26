@@ -9,3 +9,4 @@
 5. See the algorithms titles and signatures in [algorithms.py](https://github.com/kggold4/programming-research-algorithms-assignments/blob/main/Research/Ex5/algorithms.py) file
 6. See the algorithms unit tests in [test_algorithms.py](https://github.com/kggold4/programming-research-algorithms-assignments/blob/main/Research/Ex5/tests/test_algorithms.py) file
 7. See the main file that will run algorithms in Callable way [main.py](https://github.com/kggold4/programming-research-algorithms-assignments/blob/main/Research/Ex5/main.py)
+8. 
