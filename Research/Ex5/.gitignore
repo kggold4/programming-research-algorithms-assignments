@@ -1,2 +1,5 @@
 .idea/*
+.pytest_cache/*
 temp.txt
+algorithms.py
+myvenv/*
