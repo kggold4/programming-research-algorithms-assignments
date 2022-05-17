@@ -21,7 +21,7 @@
 1. [Ex1](Research/Ex1)
 2. [Ex3](Research/Ex3)
 3. [Ex5](Research/Ex5)
-4. [Ex5](Research/Ex7)
+4. [Ex7](Research/Ex7)
 
 ## Implemented algoithms list:
 1. [Karmarkar-karp heuristic partitioning algorithm](https://github.com/kggold4/prtpy/blob/main/prtpy/partitioning/kk.py)
