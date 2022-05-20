@@ -12,10 +12,12 @@ def main():
     db_utils = DBUtils()
 
     # db_utils.create_table()
+
     for bill_object in bill_objects:
         db_utils.insert(bill=bill_object)
 
     db_utils.print_table(num_of_rows=10)
+    db_utils.close()
 
 
 if __name__ == '__main__':
