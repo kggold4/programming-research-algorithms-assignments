@@ -37,3 +37,5 @@ Then the main program will iterate each ```Bill``` objects in the list and inser
 * Other example is to look at the SQLite console by typing in the ```SELECT * FROM bills```:
 
 ![img_1.png](q1/images/img_1.png)
+
+### <i>Question 2:</i>
