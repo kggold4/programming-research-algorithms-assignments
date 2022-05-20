@@ -27,7 +27,7 @@ class DBUtils:
     def insert(self, bill: Bill, table_name: str = TABLE_NAME):
         self._cursor.execute(
             f'''INSERT INTO {table_name}(BillID, Name, KnessetNum, StatusID, PrivateNumber, LastUpdatedDate)
-                           VALUES(:BillID, :KnessetNum, :KnessetNum, :StatusID, PrivateNumber, LastUpdatedDate)''',
+                           VALUES(:BillID, :Name, :KnessetNum, :StatusID, :PrivateNumber, :LastUpdatedDate)''',
             bill.convert_to_dict())
         self._db.commit()
 
