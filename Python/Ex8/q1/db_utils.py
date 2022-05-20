@@ -38,4 +38,9 @@ class DBUtils:
         else:
             rows = self._cursor.fetchall()
         for row in rows:
-            print(f"result: {row}\n")
+            print(f"BillID: {row[0]}")
+            print(f"LastUpdatedDate: {row[1]}")
+            print(f"PrivateNumber: {row[2]}")
+            print(f"StatusID: {row[3]}")
+            print(f"KnessetNum: {row[4]}")
+            print(f"Name: {row[5]}\n")
