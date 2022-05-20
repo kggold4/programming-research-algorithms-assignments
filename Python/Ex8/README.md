@@ -21,12 +21,12 @@ In ```DBUtils``` class we have a bunch of functions that help us control our ```
 
 | Attribute Name | Data Type | Explanation | 
 |---|---|---|
-| ```BillID``` | ```int key``` | t |
-| ```Name``` | ```string``` | t |
-| ```KnessetNum``` | ```int``` | t |
-| ```StatusID``` | ```int``` | t |
-| ```PrivateNumber``` | ```int unique``` | t |
-| ```LastUpdatedDate``` | ```datetime``` | t |
+| ```BillID``` | ```int key``` | ID code of the bill | 
+| ```Name``` | ```string``` | Name describe the bill |
+| ```KnessetNum``` | ```int``` | The Knesset number when the bill suggested |
+| ```StatusID``` | ```int``` | Status number code of the bill |
+| ```PrivateNumber``` | ```int unique``` | The private number of the bill |
+| ```LastUpdatedDate``` | ```datetime``` | The datetime of the the last update of this bill |
 
 Then the main program will iterate each ```Bill``` objects in the list and insert it to the database using the ```insert``` function in DBUtils class in [db_utils.py](q1/db_utils.py) file, then we can use the ```print_table``` function in the ```DBUtils``` that print all the data in the ```bills``` table using ```SELECT * FROM bills``` query.
 
