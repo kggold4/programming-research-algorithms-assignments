@@ -1,6 +1,7 @@
 from datetime import datetime
-
 from bill import Bill
+
+DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S'
 
 
 def build_bill_objects(data) -> list[Bill]:
@@ -20,7 +21,7 @@ def build_bill_objects(data) -> list[Bill]:
                 StatusID=int(bill_data_content['d:StatusID']['#text']),
                 PrivateNumber=int(bill_data_content['d:PrivateNumber']['#text']),
                 LastUpdatedDate=datetime.strptime(bill_data_content['d:LastUpdatedDate']['#text'].split('.')[0],
-                                                  '%Y-%m-%dT%H:%M:%S')
+                                                  DATETIME_FORMAT)
             )
         )
     return bills
