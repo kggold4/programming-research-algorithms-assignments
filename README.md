@@ -16,6 +16,7 @@
 2. [Ex2](Python/Ex2)
 3. [Ex4](Python/Ex4)
 4. [Ex6](Python/Ex6)
+5. [Ex8](Python/Ex8)
 
 > Research:
 1. [Ex1](Research/Ex1)
