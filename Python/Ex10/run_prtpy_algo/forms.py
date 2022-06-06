@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, InputRequired, Length, Regexp, Numb
 
 
 class InputForm(FlaskForm):
-    items = StringField('Items', validators=[DataRequired(), Regexp("^[1-8](,[1-8])*$")])
+    items = StringField('Items', validators=[DataRequired(), Regexp("^[1-9](,[1-9])*$")])
     num_of_bins = IntegerField('Number of bins', validators=[InputRequired(), NumberRange(min=0, max=20)])
     algorithm = SelectField('Algorithm', choices=[('kk', 'kk'), ('ckk', 'ckk'), ('rnp', 'rnp'), ('irnp', 'irnp')])
     submit = SubmitField('Submit')

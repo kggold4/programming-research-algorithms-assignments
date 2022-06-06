@@ -1,4 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
-<h3>Results</h3>
-{% endblock %}
+<div class="content-section">
+    <form method="POST" action="">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Enter algorithm input!</legend>
+
+            <div>
+
+                {% for bin in algo_response.bins %}
+                    <span>bin #{{ index }}: {{ bin }}</span>
+                {% endfor %}
+
+            </div>
+
+            <div>
+                {{ algo_response.sums }}
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+{% endblock content %}
