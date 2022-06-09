@@ -1,17 +1,12 @@
-<!-- Here, we added the get_flashed_messages section -->
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- w3schools CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     {% if title %}
     <title>{{title}}</title>
@@ -45,6 +40,8 @@
     <a class="w3-bar-item w3-button"
        href="https://github.com/kggold4/programming-research-algorithms-assignments/tree/main/Python/Ex10">Source
         Code</a>
+    <a class="w3-bar-item w3-button"
+       href="http://citeseerx.ist.psu.edu/viewdoc/download?rep=rep1&type=pdf&doi=10.1.1.208.2132">Paper</a>
 </div>
 
 <!-- Page Content -->
@@ -53,7 +50,7 @@
 
 <main role="main" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
 
 
             {% with messages = get_flashed_messages(with_categories=true) %}
@@ -71,6 +68,25 @@
         </div>
     </div>
 </main>
+
+
+<footer class="text-center" style="background-color: #f1f1f1;">
+    <div class="container pt-4">
+        <section class="mb-4">
+            <a class="black"
+               href="https://github.com/kggold4/programming-research-algorithms-assignments/tree/main/Python/Ex10">Source
+                Code</a>
+            -
+            <a class="black" href="https://github.com/kggold4/prtpy">GitHub</a>
+            -
+            <a class="black" href="http://citeseerx.ist.psu.edu/viewdoc/download?rep=rep1&type=pdf&doi=10.1.1.208.2132">Paper</a>
+        </section>
+    </div>
+
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <a class="text-dark" href="mailto:kfir.goldfarb@msmail.ariel.ac.il">kfir.goldfarb@msmail.ariel.ac.il</a>
+    </div>
+</footer>
 
 
 <script>

@@ -95,3 +95,27 @@ a.article-title:hover {
     align-content: center;
     text-align: center;
 }
+
+.right {
+    text-align: right;
+}
+
+.margin_right {
+    margin-right: 10%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.black {
+    color: black;
+}
+
+.red {
+    color: #a31919;
+}

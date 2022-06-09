@@ -3,18 +3,38 @@
 <div class="content-section">
     <form method="POST" action="">
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Enter algorithm input!</legend>
+            <legend class="border-bottom mb-4">{{ algo_response.description }} Algorithm:</legend>
 
-            <div>
+            <div class="container">
 
-                {% for bin in algo_response.bins %}
-                    <span>bin #{{ index }}: {{ bin }}</span>
-                {% endfor %}
+                <h2>Bins result:</h2>
 
+                <h1 class="red">{{ algo_response.error }}</h1>
+
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Bin Number</th>
+                        <th>Items</th>
+                        <th>Sum</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for i in range(algo_response.length) %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ algo_response.bins[i] }}</td>
+                        <td>{{ algo_response.sums[i] }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
             </div>
 
-            <div>
-                {{ algo_response.sums }}
+            <div class="right margin_right italic">
+                <h4>Sum error: {{ algo_response.diff_sum }}</h4>
             </div>
 
         </fieldset>
